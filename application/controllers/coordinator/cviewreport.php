@@ -11,6 +11,7 @@ class Cviewreport extends CI_Controller  {
 	{
 		//Function yang digunakan untuk menampilkan view products_view.php
 		$data['query'] = $this->cviewreport_model->getAllCviewreport(); //berisi dari return value pada function getAllProducts() di file models/products_model.php
-		$this->load->view('coordinator_view/cviewreport_view', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
+		$this->load->view('coordinator_view/cviewreport_view',$data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
 	}
+    
 }

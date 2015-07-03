@@ -20,7 +20,7 @@ $this->load->view('coordinator_view/template/sidebar');
     <!-- Default box -->
     <div class="box">
         <div class="box-header with-border">
-            <h3 class="box-title">List Employee</h3>
+            <h3 class="box-title">List Report</h3>
             <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                 <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
@@ -28,13 +28,20 @@ $this->load->view('coordinator_view/template/sidebar');
         </div>
         <div class="box-body">
             
+            Sort by Departement &nbsp&nbsp
+            
+            <form action="<?php echo base_url('coordinator/cviewreport/sort_Departement'); ?>" method="post">
+            <select name="kode">
+               <option value="1011" > All Departement</option>
+                <option value="1011" > Dep A</option>
+                <option value="1021" > Dep B</option>
+            
+            </select>
+            <input type="submit" name="submit" value="Show">
+            <p></p><br><br>
             
             
-            <?php
-                
-            ?>
-            
-            <table class="table table-bordered table-hover dataTable" >
+            <table id="example1" class="table table-bordered table-striped" >
                 <thead>
                     <tr>
                     <th>No.</th>    
@@ -48,25 +55,23 @@ $this->load->view('coordinator_view/template/sidebar');
                 <tbody>
                     <?php
                         $i=1;
+                    if(!empty($query)){
                     foreach($query as $row){
                     ?>
                     
                     <tr>
                         <td><?= $i ?></td>
-                        <td><?= $row->aa ?></td>
-                        <td><?= $row->bb ?></td>
-                        <td><?= $row->cc ?></td>
-                        <td><?= $row->dd ?></td>
+                        <td><?= $row->namaL ?></td>
+                        <td><?= $row->tanggal ?></td>
+                        <td><?= $row->nama ?></td>
+                        <td><?= $row->namaD ?></td>
+                        <td><a href="#" class='fa fa-eye'></a> &nbsp&nbsp&nbsp <a href="#" class='fa fa-edit'></a> &nbsp&nbsp&nbsp <a href="#" class='fa fa-times'></a></td>  
                        
-                        <td>
-							<!-- Akan melakukan update atau delete sesuai dengan id yang diberikan ke controller -->
-							
-						</td>
                     
                     </tr>
                     <?php
                     $i++;
-                    }
+                    }}else{}
                     ?>
                 </tbody>
             
@@ -91,6 +96,12 @@ $this->load->view('coordinator_view/template/sidebar');
 <?php 
 $this->load->view('coordinator_view/template/js');
 ?>
+<script type="text/javascript">
+      $(document).ready(function() {
+        $("#example1").dataTable();
+      });
+</script>
+
 <!--tambahkan custom js disini-->
 <?php
 $this->load->view('coordinator_view/template/foot');

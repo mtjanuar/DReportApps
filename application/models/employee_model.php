@@ -9,6 +9,19 @@ class Employee_model extends CI_Model {
 		return $this->db->get();
 	}
     
+    function getByDepartement(){
+        $action = $this->input->post('action');
+		if ($action == "delete") {
+			$delete = $this->input->post('msg');
+			for ($i=0; $i < count($delete) ; $i++) { 
+				$this->db->where('nis', $delete[$i]);
+				$this->db->delete('siswa');
+			}
+		}
+    
+    
+    }
+    
     
     
 }
