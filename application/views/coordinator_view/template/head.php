@@ -24,3 +24,4 @@
         <![endif]-->
         
         <link href="<?php echo base_url('assets/AdminLTE-2.0.5/plugins/datatables/dataTables.bootstrap.css') ?>" rel="stylesheet" type="text/css" />
+        

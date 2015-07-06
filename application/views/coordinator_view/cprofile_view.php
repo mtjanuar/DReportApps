@@ -1,10 +1,10 @@
 <?php 
-$this->load->view('employee_view/template/head');
+$this->load->view('coordinator_view/template/head');
 ?>
 <!--tambahkan custom css disini-->
 <?php
-$this->load->view('employee_view/template/topbar');
-$this->load->view('employee_view/template/sidebar');
+$this->load->view('coordinator_view/template/topbar');
+$this->load->view('coordinator_view/template/sidebar');
 ?>
 <!-- Content Header (Page header) -->
 
@@ -24,13 +24,18 @@ $this->load->view('employee_view/template/sidebar');
               <br><br><br>
                 <div class="row">
                 <div class="col-md-6">
-                    <label style="font-size: 20px; margin-left: 270px;">Name</label><br><br>
-                    <label style="font-size: 20px; margin-left: 270px;">Gender</label><br><br>
-                    <label style="font-size: 20px; margin-left: 270px;">Phone</label><br><br>
+                    
+                    <?php
+                    foreach($query as $row){
+                    ?>
+
+                    <label style="font-size: 20px; margin-left: 270px;">Name : <i><?= $row->name ?></i></label><br><br>
+                    <label style="font-size: 20px; margin-left: 270px;">Gender : <i><?= $row->gender ?></i></label><br><br>
+                    <label style="font-size: 20px; margin-left: 270px;">Phone : <i><?= $row->hp ?></i></label><br><br>
                 </div>
                 <div class="col-md-6">
-                    <label style="font-size: 20px; margin-left: 110px;">Date of Birth</label><br><br>
-                    <label style="font-size: 20px; margin-left: 110px;">Email</label><br><br>
+                    <label style="font-size: 20px; margin-left: 110px;">Date of Birth : <i><?= $row->dob ?></i></label><br><br>
+                    <label style="font-size: 20px; margin-left: 110px;">Email : <i><?= $row->email ?></i></label><br><br>
                 </div>
                 </div>
                 <br><br>
@@ -39,6 +44,9 @@ $this->load->view('employee_view/template/sidebar');
                 <button class="btn btn-block btn-danger" style="width: 230px; margin-left: 400px;">Change Password</button>
                 <br>
                 <br>
+                  <?php
+                    }
+                  ?>
             </div>
           <!-- Your Page Content Here -->
 

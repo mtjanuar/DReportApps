@@ -9,7 +9,7 @@ $this->load->view('coordinator_view/template/sidebar');
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Dashboard
+        Departement Profile
         
     </h1>
 </section>
@@ -27,10 +27,20 @@ $this->load->view('coordinator_view/template/sidebar');
             </div>
         </div>
         <div class="box-body">
-            <h1> Welcome, Coordinator</h1>
+             <?php
+                    foreach($query as $row){
+                    ?>
+            <h3> Departement Name </h3>
+            <input class="form-control input-lg" type="text" value="<?= $row->nama ?>" >
+            <h3> Description </h3>
+            <textarea class="form-control" rows="5" value=""><?= $row->deskripsi ?></textarea><br>
+            
+            <button class="btn pull-right btn-primary btn-lg">Update Profile</button>
         </div><!-- /.box-body -->
         <div class="box-footer">
-           
+           <?php
+                    }
+            ?>
         </div><!-- /.box-footer-->
     </div><!-- /.box -->
 

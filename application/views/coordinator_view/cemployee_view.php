@@ -9,8 +9,8 @@ $this->load->view('coordinator_view/template/sidebar');
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Report List
-      
+        Employee List
+         
     </h1>
 </section>
 
@@ -27,35 +27,14 @@ $this->load->view('coordinator_view/template/sidebar');
             </div>
         </div>
         <div class="box-body">
-            <div class="row">
-                <div class="col-xs-3">
-            
-            
-            Sort by Departement &nbsp&nbsp
-            
-            <form id="formSearch" action="<?php echo base_url('index.php/coordinator/cviewreport/search/'); ?>" method="post">
-            <select class="form-control" name="search" id="search">
-               <option value="" >All Departement</option>
-                <?php
-                    foreach($divisi as $d){
-                        echo "<option value='".$d->id_divisi."'>".$d->nama."</option>";
-                    }
-                ?>
-            </select>
-                
-            <button type="submit" name="submit" class=" btn btn-block btn-primary btn-flat go inline ">Show</button>
-            
-            </form><p></p><br><br>
-                </div></div>
             
             <table id="example1" class="table table-bordered table-striped" >
                 <thead>
                     <tr>
                     <th>No.</th>    
-                    <th>Tittle</th>
-                    <th>Date</th>
-                    <th>Author</th>
-                    <th> Departement</th>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
                     <th>Actions</th>
                     </tr>
                 </thead>
@@ -68,10 +47,9 @@ $this->load->view('coordinator_view/template/sidebar');
                     
                     <tr>
                         <td><?= $i ?></td>
-                        <td><?= $row->namaL ?></td>
-                        <td><?= $row->tanggal ?></td>
+                        <td><?= $row->nip ?></td>
                         <td><?= $row->nama ?></td>
-                        <td><?= $row->namaD ?></td>
+                        <td><?= $row->email ?></td>
                         <td><a href="#" class='fa fa-eye'></a> &nbsp&nbsp&nbsp <a href="#" class='fa fa-edit'></a> &nbsp&nbsp&nbsp <a href="#" class='fa fa-times'></a></td>  
                        
                     
