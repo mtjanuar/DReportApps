@@ -17,16 +17,9 @@
             
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="#"><i class='fa fa-home'></i> <span>Dashboard</span></a></li>
-            <li><a href="#"><i class='fa fa-user'></i> <span>Profile</span></a></li>
+            <li><a href="#"><i class='fa fa-user'></i> <span>User</span></a></li>
             <li><a href="#"><i class='fa fa-building'></i> <span>Departement</span></a></li>
-            <li><a href="#"><i class='fa fa-group'></i> <span>Employee</span></a></li>
-            <li class="treeview">
-              <a href="#"><i class='fa fa-file-text'></i> <span>Report</span> <i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="#">Create Report</a></li>
-                <li><a href="#">View Report</a></li>
-              </ul>
-            </li>
+            <li><a href="#"><i class='fa fa-group'></i> <span>Request</span></a></li>
           </ul><!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->

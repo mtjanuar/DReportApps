@@ -6,11 +6,11 @@
          <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="<?=site_url('index.php/employee/ereport/index')?>" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"></span>
           <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Coordinator's</b></span>
+            <span class="logo-lg"><b>Employee's</b></span>
         </a>
 
         <!-- Header Navbar -->
@@ -37,7 +37,7 @@
                       <li><!-- start message -->
                         <a href="#">
                           <div class="pull-left">
-                            <img src="/assets/AdminLTE-2.0.5/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+                            <img src="<?php echo base_url('assets/AdminLTE-2.0.5/dist/img/user2-160x160.jpg')?>" class="img-circle" alt="User Image"/>
                           </div>
                           <h4>
                             Support Team
@@ -57,14 +57,14 @@
                 <!-- Menu Toggle Button -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <!-- The user image in the navbar-->
-                  <img src="/assets/AdminLTE-2.0.5/dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
+                  <img src="<?php echo base_url('assets/AdminLTE-2.0.5/dist/img/user2-160x160.jpg')?>" class="user-image" alt="User Image"/>
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
                   <span class="hidden-xs">Alexander Pierce</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
-                    <img src="/assets/AdminLTE-2.0.5/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url('assets/AdminLTE-2.0.5/dist/img/user2-160x160.jpg')?>" class="img-circle" alt="User Image" />
                     <p>
                       Alexander Pierce - Web Developer
                       <small>Member since Nov. 2012</small>
@@ -88,7 +88,7 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="<?=site_url('index.php/employee/ereport/logout')?>" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
