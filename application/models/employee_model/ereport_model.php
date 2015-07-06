@@ -15,7 +15,7 @@ class Ereport_model extends CI_Model{
         $result = $result->result();
         return $result; 
     }
-    
+     
     
     
 }

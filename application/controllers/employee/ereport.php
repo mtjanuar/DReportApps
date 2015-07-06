@@ -12,7 +12,7 @@ class Ereport extends CI_Controller {
 		$this->load->helper('text');
         $this->load->model('employee_model/ereport_model');
     }
-    
+     
     public function index() {
 		$data['username'] = $this->session->userdata('username');
 		$this->load->view('employee_view/edashboard_view', $data);

@@ -9,7 +9,7 @@ class Cviewreport extends CI_Controller  {
 		$this->load->model("coordinator_model/cviewreport_model"); //constructor yang dipanggil ketika memanggil products.php untuk melakukan pemanggilan pada model : products_model.php yang ada di folder models
         
         
-        
+         
 	}
 
 	public function index()

@@ -7,7 +7,7 @@ class Cprofile extends CI_Controller {
         if (!$this->session->userdata('role')=="2") {
 			redirect('index.php/login');
 		}
-		$this->load->helper('text');
+		$this->load->helper('text'); 
 		$this->load->model("coordinator_model/cprofile_model"); //constructor yang dipanggil ketika memanggil products.php untuk melakukan pemanggilan pada model : products_model.php yang ada di folder models
         
         
